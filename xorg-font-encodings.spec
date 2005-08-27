@@ -1,7 +1,5 @@
-# $Rev: 3433 $, $Date: 2005-08-27 17:42:48 $
-#
-Summary:	encodings
-Summary(pl):	encodings
+Summary:	X font encodings database
+Summary(pl):	Baza kodowañ fontów X
 Name:		xorg-font-encodings
 Version:	0.99.0
 Release:	0.02
@@ -13,22 +11,20 @@ Patch0:		encodings-fontpath.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-app-mkfontscale
 BuildRequires:	xorg-util-util-macros
-BuildRequires:	pkgconfig >= 0.19
-BuildRoot:	%{tmpdir}/encodings-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-encodings
+X font encodings database.
 
 %description -l pl
-encodings
-
+Baza kodowañ fontów X.
 
 %prep
 %setup -q -n encodings-%{version}
 %patch0 -p1
-
 
 %build
 %{__aclocal}
@@ -38,17 +34,14 @@ encodings
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %files
 %defattr(644,root,root,755)
