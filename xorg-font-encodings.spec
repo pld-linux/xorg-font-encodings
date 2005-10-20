@@ -7,7 +7,7 @@ License:	MIT
 Group:		X11
 Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/font/encodings-%{version}.tar.bz2
 # Source0-md5:	9275581cdcd7d74120a75680ed2aa1ca
-Patch0:		encodings-fontpath.patch
+#Patch0:		encodings-fontpath.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -24,7 +24,7 @@ Baza kodowañ fontów X.
 
 %prep
 %setup -q -n encodings-%{version}
-%patch0 -p1
+#%patch0 -p1
 
 %build
 %{__aclocal}
