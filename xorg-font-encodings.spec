@@ -1,5 +1,5 @@
 Summary:	X font encodings database
-Summary(pl.UTF-8):   Baza kodowań fontów X
+Summary(pl.UTF-8):	Baza kodowań fontów X
 Name:		xorg-font-encodings
 Version:	1.0.2
 Release:	1
