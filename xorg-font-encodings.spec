@@ -1,5 +1,5 @@
 Summary:	X font encodings database
-Summary(pl):	Baza kodowañ fontów X
+Summary(pl.UTF-8):   Baza kodowaÅ„ fontÃ³w X
 Name:		xorg-font-encodings
 Version:	1.0.2
 Release:	1
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X font encodings database.
 
-%description -l pl
-Baza kodowañ fontów X.
+%description -l pl.UTF-8
+Baza kodowaÅ„ fontÃ³w X.
 
 %prep
 %setup -q -n encodings-%{version}
