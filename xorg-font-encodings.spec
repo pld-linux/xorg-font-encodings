@@ -11,7 +11,8 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	xorg-app-mkfontscale
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-font-font-util >= 1.1
+BuildRequires:	xorg-util-util-macros >= 1.3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,8 +30,8 @@ Baza kodowań fontów X.
 %{__autoconf}
 %{__automake}
 %configure \
-	--build=%{_host_platform} \
-	--host=%{_host_platform} \
+	--build=%{_host} \
+	--host=%{_host} \
 	--with-encodingsdir=%{_fontsdir}/encodings
 
 %{__make}
@@ -46,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %{_fontsdir}/encodings
