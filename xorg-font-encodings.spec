@@ -1,18 +1,20 @@
 Summary:	X font encodings database
 Summary(pl.UTF-8):	Baza kodowań fontów X
 Name:		xorg-font-encodings
-Version:	1.0.5
-Release:	2
+Version:	1.0.6
+Release:	1
 License:	Public Domain
 Group:		X11
-Source0:	https://xorg.freedesktop.org/releases/individual/font/encodings-%{version}.tar.bz2
-# Source0-md5:	bbae4f247b88ccde0e85ed6a403da22a
+Source0:	https://xorg.freedesktop.org/releases/individual/font/encodings-%{version}.tar.xz
+# Source0-md5:	c2bcfdc52b8b6462228342cedae2fed9
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-app-mkfontscale
 BuildRequires:	xorg-font-font-util >= 1.2
 BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xz
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
